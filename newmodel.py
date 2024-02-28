@@ -1,5 +1,5 @@
 # take images for comparison from a firebase storage
-
+#newmodel.py
 import os
 import torch
 from PIL import Image
