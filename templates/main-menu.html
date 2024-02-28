@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+
+    <link rel="stylesheet" type="text/css" href="static/css/main-menu.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <script type="module" src="static/js/missing-p-details.js"></script>
+    
+    
+</head>
+
+
+<body>
+    <div class="background">
+        <a href="#" class="logo">
+            <img src="static\images\prapth-logo.jpeg" alt="Prapth Logo" width="80" height="80">
+        </a>
+        <nav class="navbar">
+            <a href="/home.html">Home</a>
+            <span id="username-placeholder"></span>
+        </nav>
+
+        <div class="home-container">
+            <h1>Welcome to PRAPTH</h1>
+            <!-- <p>Choose an option to get started:</p> -->
+            
+           
+                <div class="button-wrapper">
+                    <div class="button-description">
+                        <p>
+                            Report details of a missing person, providing information that can aid in their search and recovery.
+                        </p>
+                    </div>
+                    <button id="reportBtn">
+                        Report Missing Person Details
+                    </button>
+                </div>
+
+                <div class="button-wrapper">
+                    <div class="button-description">
+                        <p>
+                            Explore tools and resources for identifying missing persons, including facial recognition technology.
+                        </p>
+                    </div>
+                    <button onclick="location.href='/suspect_reporting.html'">
+                        Missing Person Identification
+                    </button>
+                    
+                </div>  
+            
+
+            <!-- Form for reporting missing person details (initially hidden) -->
+            <div class="form-container" id="reportForm" style="display: none;">
+                <h3>Report Missing Person</h3>
+                <form id="missingPersonForm">
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name" ><br>
+
+                    <label for="age">Age:</label><br>
+                    <input type="text" id="age" name="age"><br>
+
+                    <label for="address">Address:</label><br>
+                    <input type="text" id="address" name="address"><br>
+
+                    <label for="place">Place Where the Person Went Missing:</label><br>
+                    <input type="text" id="place" name="place"><br>
+
+                    <label for="days">Days Missing:</label><br>
+                    <input type="text" id="days" name="days"><br>
+
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email"><br>
+
+                    <label for="contact">Contact Details:</label><br>
+                    <input type="text" id="contact" name="contact"><br>
+
+                    <label for="details">Other Details:</label><br>
+                    <textarea id="details" name="details"></textarea><br>
+
+                    <label for="photos">Upload Photos:</label><br>
+                    <input type="file" id="photos" name="photos" multiple><br><br>
+
+                    <input type="submit" value="Submit">
+                </form>
+            </div>    
+
+       </div>
+    </div>
+
+    <script src="static/js/main-menu.js"></script>
+    <!-- <script type="module" src="static/js/login.js"></script> -->
+</body>
+</html>

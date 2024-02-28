@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Recognition</title>
+
+    <link rel="stylesheet" href="static/css/suspect_reporting.css">
+</head>
+<body>
+
+    <h2><ul>PRAPTH</ul></h2>
+
+    <form action="/upload" method="post" enctype="multipart/form-data" id="suspect-form">
+        <label for="imageInput">Select an image:</label><br><br>
+        <input type="file" id="imageInput" name="image" accept="image/*" required>
+        <br>
+        <button type="submit">Upload Image</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        const resultDiv = document.getElementById('result');
+
+        function handleFileSelect(event) {
+            const file = event.target.files[0];
+
+            if (!file.type.startsWith('image/')) {
+                resultDiv.textContent = 'Please select an image file.';
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('image', file);
+
+            fetch('/upload', {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => response.json())
+                .then(data => {
+                    resultDiv.textContent = data.message;
+                })
+                .catch(error => {
+                    resultDiv.textContent = 'An error occurred: ' + error;
+                });
+        }
+
+        document.getElementById('imageInput').addEventListener('change', handleFileSelect);
+    </script>
+
+</body>
+</html>

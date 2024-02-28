@@ -1,0 +1,28 @@
+
+
+h2{
+    /* margin-bottom: 20px; */
+    text-align: center;
+    font-size: 60px;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+body {
+    height: 100vh;
+    background-color: rgb(193, 18, 76);
+    margin: 0;
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+.suspect-form {
+    /* padding-top: 100px; */
+    margin-top: 20px;
+    
+    text-align: center;
+    /* Add any other styling you need for your form */
+}
