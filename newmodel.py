@@ -1,5 +1,5 @@
 #take images for comparison from a firebase storage
-#neew comment
+#comment by Jeevan
 import os
 import torch
 from PIL import Image
