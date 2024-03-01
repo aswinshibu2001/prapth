@@ -7,7 +7,7 @@ from facenet_pytorch import MTCNN, InceptionResnetV1, extract_face
 from PIL import Image
 from tkinter import filedialog
 from tkinter import Tk
-
+# Import all models to avoid errorsb
 # Define the modified prewhiten function
 def prewhiten(x):
     mean = x.mean().item()
