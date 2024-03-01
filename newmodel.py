@@ -85,6 +85,10 @@ def form():
 def home_page():
     return render_template('home.html')
 
+@app.route('/aboutus.html')
+def about():
+    return render_template('aboutus.html')
+
 @app.route('/suspect_reporting.html')
 def suspect():
     return render_template('suspect_reporting.html')
