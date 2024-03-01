@@ -1,6 +1,5 @@
 #take images for comparison from a firebase storage
-#newmodel.py
-#comment line added in newbranch
+#neew comment
 import os
 import torch
 from PIL import Image

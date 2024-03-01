@@ -8,6 +8,7 @@ from flask import Flask, render_template, request, jsonify
 from facenet_pytorch import MTCNN, InceptionResnetV1, extract_face
 
 #this is command
+#this is the second command
 
 
 def prewhiten(x):
