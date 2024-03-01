@@ -1,6 +1,5 @@
 #take images for comparison from a firebase storage
-#newmodel.py
-#comment line added in newbranch
+#comment by Jeevan
 import os
 import torch
 from PIL import Image
@@ -85,6 +84,10 @@ def form():
 @app.route('/home.html')
 def home_page():
     return render_template('home.html')
+
+@app.route('/aboutus.html')
+def about():
+    return render_template('aboutus.html')
 
 @app.route('/suspect_reporting.html')
 def suspect():
