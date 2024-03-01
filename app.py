@@ -7,7 +7,7 @@ import numpy as np
 from flask import Flask, render_template, request, jsonify
 from facenet_pytorch import MTCNN, InceptionResnetV1, extract_face
 
-
+#this is command
 
 
 def prewhiten(x):
