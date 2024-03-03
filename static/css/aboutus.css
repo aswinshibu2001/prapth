@@ -1,11 +1,12 @@
-
+/* CSS for body */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8));
+    background: black;
     color: #fff;
 }
 
+/* CSS for navbar */
 nav {
     background-color: transparent;
     padding: 15px 20px;
@@ -20,11 +21,20 @@ nav {
     width: 100%;
 }
 
+/* CSS for logo */
 .logo img {
     max-width: 50px;
-    height: auto;     
+    height: auto;
 }
 
+/* CSS for home link */
+.home {
+    margin-left: auto; /* Moves home link to the right */
+    margin-right: 20px; /* Adjust margin for spacing */
+    padding: 0 10px; /* Add padding for better visibility */
+}
+
+/* CSS for navbar links */
 .nav-links {
     list-style: none;
     margin: 0;
@@ -41,11 +51,13 @@ nav {
     text-decoration: none;
 }
 
+/* CSS for content */
 .content {
     margin-top: 100px;
     padding: 0 20px;
 }
 
+/* CSS for about us section */
 .about-us h2 {
     font-size: 32px;
     text-align: center;
