@@ -14,6 +14,8 @@
     <form action="/upload" method="post" enctype="multipart/form-data" id="suspect-form">
         <label for="imageInput">Select an image:</label><br><br>
         <input type="file" id="imageInput" name="image" accept="image/*" required>
+        <input type="hidden" id="latitude" name="latitude">
+        <input type="hidden" id="longitude" name="longitude">
         <br>
         <button type="submit">Upload Image</button>
     </form>
@@ -49,6 +51,15 @@
 
         document.getElementById('imageInput').addEventListener('change', handleFileSelect);
     </script>
+  <script src="geolocation.js"></script>
 
+  <!-- Add this script after including geolocation.js -->
+<script>
+    document.getElementById("missingPersonForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent default form submission behavior
+        getLocation(); // Call the getLocation function to get user's location
+        this.submit(); // Submit the form after getting location (you may need to adjust this if you want to handle location asynchronously)
+    });
+</script>
 </body>
 </html>
