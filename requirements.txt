@@ -1,0 +1,5 @@
+pip install torch
+pip install numpy
+pip install flask
+pip install facenet_pytorch
+pip install firebase_admin
