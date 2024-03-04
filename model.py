@@ -1,4 +1,4 @@
-# originally created model
+# originally creadffuiated model
 #some comments
 import cv2
 import torch

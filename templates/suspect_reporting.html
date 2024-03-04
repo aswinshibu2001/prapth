@@ -20,6 +20,7 @@
 
     <div id="result"></div>
 
+    <!-- Modify your existing script to include the getLocation function -->
     <script>
         const resultDiv = document.getElementById('result');
 
@@ -48,7 +49,41 @@
         }
 
         document.getElementById('imageInput').addEventListener('change', handleFileSelect);
+
+        // Function to get the user's location
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+            } else {
+                resultDiv.textContent = 'Geolocation is not supported by this browser.';
+            }
+        }
+
+        // Function to handle successful retrieval of the user's location
+        function showPosition(position) {
+            resultDiv.textContent = 'Latitude: ' + position.coords.latitude + '<br>Longitude: ' + position.coords.longitude;
+        }
+
+        // Function to handle errors during geolocation retrieval
+        function showError(error) {
+            switch (error.code) {
+                case error.PERMISSION_DENIED:
+                    resultDiv.textContent = 'User denied the request for Geolocation.';
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    resultDiv.textContent = 'Location information is unavailable.';
+                    break;
+                case error.TIMEOUT:
+                    resultDiv.textContent = 'The request to get user location timed out.';
+                    break;
+                case error.UNKNOWN_ERROR:
+                    resultDiv.textContent = 'An unknown error occurred.';
+                    break;
+            }
+        }
     </script>
+
+    
 
 </body>
 </html>
