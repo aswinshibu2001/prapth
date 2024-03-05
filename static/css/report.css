@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #007239, #FFFFFF);
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: transparent;
+    border-radius: 10px;
+    text-align: center;
+    background-color: transparent; /* Make the background transparent */
+    backdrop-filter: blur(10px); /* Apply a blur effect to the background */
+  }
+  
+  h1 {
+    color: #003366;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #003366;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8); /* Set a semi-transparent background */
+  }
+  
+  button {
+    background-color: #003366;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #001f4d;
+  }
+  
+  .loading {
+    display: none;
+    margin-top: 20px;
+  }
+  
+  .loading p {
+    font-weight: bold;
+    color: #003366;
+  }
+  
+  .image-preview {
+    margin-top: 20px;
+  }
+  

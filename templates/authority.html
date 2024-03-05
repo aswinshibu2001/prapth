@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prapth - Authority Login</title>
+  <link rel="stylesheet" href="static\css\authority.css">
+</head>
+
+<body style="background-image: url('static/images/back1.jpeg'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed;">
+  <div class="navbar">
+    <img src="static\images\prapth-logo.jpeg" alt="Prapth Logo" width="80" height="80">
+    <ul>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+  <div class="header">PRAPTH</div>
+  <button class="login-button" onclick="toggleLoginContainer()">Services</button>
+  <div class="login-container" id="loginContainer">
+    <h1>Authority Login</h1>
+    <p>Welcome to Prapth Authority Login</p>
+    <a href="report_cases.html"><button class="login-button">Report cases</button></a>
+    <a href="look_details.html"></a><button class="login-button">Missing Person Details</button></a>
+  </div>
+
+  <script>
+    function toggleLoginContainer() {
+      var loginContainer = document.getElementById("loginContainer");
+      if (loginContainer.style.display === "none") {
+        loginContainer.style.display = "block";
+      } else {
+        loginContainer.style.display = "none";
+      }
+    }
+  </script>
+
+  
+</body>
+
+
+</html>
