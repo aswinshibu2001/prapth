@@ -6,42 +6,37 @@
     <title>Missing Persons Portal - Login</title>
     <link rel="stylesheet" href="static\css\login.css">
 </head>
-
-
-
 <body style="background-image: url('static/images/back1.jpeg'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed;">
-    <nav class="navbar">
-        <a href="#" class="logo">
-            <img src="static\images\prapth-logo.jpeg" alt="Prapth Logo" width="80" height="80">
-        </a>
-        <a href="/home.html">Home</a>
-    </nav>
 
     <div id="login-form">
-        <button class="toggle-button" id="toggleSignIn">Sign In</button>
-        <button class="toggle-button" id="toggleSignUp" style="display: none;">Sign Up</button>
+        <button class="toggle-button" id="toggleSignIn">Login</button>
+        <button class="toggle-button" id="toggleSignUp" style="display: none;">Register</button>
         <div id="signup-form" style="display: none;">
-            <h2>Sign Up</h2>
+            <h2>Register</h2>
             <form>
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required><br>
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required><br>
                 <label for="name">Username:</label>
                 <input type="text" id="name" name="name" required><br>
-                <button type="submit">Sign Up</button>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required><br>
+                
+                <button type="submit">Register</button>
             </form>
+            <button class="toggle-button" id="toggleSignIn">Login</button>
         </div>
 
         <div id="signin-form">
-            <h2>Sign In</h2>
+            <h2>Login</h2>
             <form>
                 <label for="signin-email">Email:</label>
                 <input type="email" id="signin-email" name="signin-email" required><br>
                 <label for="signin-password">Password:</label>
                 <input type="password" id="signin-password" name="signin-password" required><br>
-                <button type="submit">Sign In</button>
+                <button type="submit">Login</button>
+                <button class="forgot-password" id="forgotPassword">Forgot Password?</button>
             </form>
+            <button class="toggle-button" id="toggleSignUp" style="display: none;">Register</button>
         </div>
 
         <button id="signout" style="display: none;">Sign Out</button>
@@ -53,18 +48,18 @@
     </div>
 
     <script>
-        const toggleSignInForm = () => {
-            document.getElementById("signin-form").style.display = "block";
-            document.getElementById("signup-form").style.display = "none";
-            document.getElementById("toggleSignIn").style.display = "none";
-            document.getElementById("toggleSignUp").style.display = "inline-block";
-        }
-
         const toggleSignUpForm = () => {
             document.getElementById("signin-form").style.display = "none";
             document.getElementById("signup-form").style.display = "block";
             document.getElementById("toggleSignIn").style.display = "inline-block";
             document.getElementById("toggleSignUp").style.display = "none";
+        }
+
+        const toggleSignInForm = () => {
+            document.getElementById("signin-form").style.display = "block";
+            document.getElementById("signup-form").style.display = "none";
+            document.getElementById("toggleSignIn").style.display = "none";
+            document.getElementById("toggleSignUp").style.display = "inline-block";
         }
 
         document.getElementById("toggleSignIn").addEventListener("click", toggleSignInForm);
