@@ -50,16 +50,30 @@
         }
 
         document.getElementById('imageInput').addEventListener('change', handleFileSelect);
-    </script>
-  <script src="geolocation.js"></script>
 
-  <!-- Add this script after including geolocation.js -->
-<script>
-    document.getElementById("missingPersonForm").addEventListener("submit", function(event) {
-        event.preventDefault(); // Prevent default form submission behavior
-        getLocation(); // Call the getLocation function to get user's location
-        this.submit(); // Submit the form after getting location (you may need to adjust this if you want to handle location asynchronously)
-    });
-</script>
+        // Function to get user's location
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                resultDiv.textContent = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        // Function to update hidden input fields with latitude and longitude
+        function showPosition(position) {
+            document.getElementById("latitude").value = position.coords.latitude;
+            document.getElementById("longitude").value = position.coords.longitude;
+        }
+
+        // Add event listener for form submission
+        document.getElementById("suspect-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission behavior
+            getLocation(); // Call the getLocation function to get user's location
+            setTimeout(() => { // Adding a small delay to ensure location is fetched before form submission
+                this.submit(); // Submit the form after getting location
+            }, 1000);
+        });
+    </script>
 </body>
 </html>
