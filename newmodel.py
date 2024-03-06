@@ -89,6 +89,10 @@ def home_page():
 def about():
     return render_template('aboutus.html')
 
+@app.route('/missing_reporting.html')
+def missing():
+    return render_template('missing_reporting.html')
+
 @app.route('/suspect_reporting.html')
 def suspect():
     return render_template('suspect_reporting.html')

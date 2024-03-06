@@ -8,14 +8,14 @@
     <link rel="stylesheet" type="text/css" href="static/css/main-menu.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    <script type="module" src="static/js/missing-p-details.js"></script>
+    <!-- <script type="module" src="static/js/missing-p-details.js"></script> -->
     
     
 </head>
 
 
 <body style="background-image: url('static/images/back1.jpeg'); background-repeat: no-repeat;background-size: cover; background-attachment:fixed;">
-    <div class="background">
+    <!-- <div class="background"> -->
         <a href="#" class="logo">
             <img src="static\images\prapth-logo.jpeg" alt="Prapth Logo" width="80" height="80">
         </a>
@@ -24,34 +24,34 @@
             <span id="username-placeholder"></span>
         </nav>
 
-        <div class="home-container">
-            <h1>Welcome to PRAPTH</h1>
-            <!-- <p>Choose an option to get started:</p> -->
-            
-           
-                <div class="button-wrapper">
-                    <div class="button-description">
-                        <p>
-                            Report details of a missing person, providing information that can aid in their search and recovery.
-                        </p>
-                    </div>
-                    <button id="reportBtn">
-                        Report Missing Person Details
-                    </button>
-                </div>
+ 
+        <h1>Welcome to PRAPTH</h1>
 
-                <div class="button-wrapper">
-                    <div class="button-description">
-                        <p>
-                            Explore tools and resources for identifying missing persons, including facial recognition technology.
-                        </p>
-                    </div>
-                    <button onclick="location.href='/suspect_reporting.html'">
-                        Missing Person Identification
-                    </button>
-                    
-                </div>  
+        <div class="card-container">
+
+            <a href="/missing_reporting.html" class="card">
             
+                <p class="card-title">Report Missing Person Details</p>
+                <p class="small-desc">
+                    Report details of a missing person, providing information that can aid in their search and recovery.
+                </p>
+                <div class="go-corner">
+                    <div class="go-arrow">→</div>
+                </div>    
+            </a>
+
+            <a href="/suspect_reporting.html" class="card">
+                <p class="card-title">Missing Person Identification</p>
+                <p class="small-desc">
+                    Explore tools and resources for identifying missing persons, including facial recognition technology.
+                </p>
+                <div class="go-corner">
+                    <div class="go-arrow">→</div>
+                </div>    
+            </a>
+ 
+        </div>
+    <!-- </div> -->
 
             <!-- Form for reporting missing person details (initially hidden) -->
             <div class="form-container" id="reportForm" style="display: none;">
