@@ -5,7 +5,7 @@ body, html {
     font-family: Arial, sans-serif;
 }
 
-
+/* ************************************ logo and home button in navigation bar ************************** */
 .logo {
     position: absolute;
     top: 20px;
@@ -34,15 +34,35 @@ body, html {
 }
 
 .navbar a:hover {
-    background: black;
-    color: #fff;
+  background: #1884dd ;
+  color : #fcfeff ;  
 }
 
-h1{
-    color: #D60073;
-    text-align: center;
-   margin-top: 150px;
+.arrow {
+  border: solid rgb(250, 250, 250);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
 }
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+/* ************************************ logo and home button in navigation bar ************************** */
+h1{
+  position: relative;
+  color: #ee38b1;
+  text-align: center;
+ margin-top: 100px;
+ /* left: 200px; */
+ font-family: 'Times New Roman', Times, serif;
+ font-size: 60px;
+}
+
+
+
 
 
 /* card elements css **********************************************/
