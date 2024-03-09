@@ -9,15 +9,29 @@
 </head>
 <body style="background-image: url('static/images/back1.jpeg'); background-repeat: no-repeat;background-size: cover; background-attachment:fixed;">
 
-    <h1>PRAPTH</h1>
+    <a href="#" class="logo">
+        <img src="static\images\prapth-logo.jpeg" alt="Prapth Logo" width="80" height="80">
+    </a>
+    <nav class="navbar">
+        <a href="/home.html">Home</a>
+        <span id="username-placeholder"></span>
+    </nav>
 
+
+    <h1> <b>W</b>elcome to <b>PRAPTH</b>...!</h1>
+    <p id="p1">Upload a clear image of the person you want to report as Founded. </p>
+
+
+<div id="form">
     <form action="/upload" method="post" enctype="multipart/form-data" id="suspect-form">
-        <label for="imageInput">Select an image:</label><br><br>
+        <p style="left: 0px;">Select an image :</p><br><br>
         <input type="file" id="imageInput" name="image" accept="image/*" required>
-        <br>
+        <br><br><br>
         <button type="submit">Upload Image</button>
     </form>
 
     <div id="result"></div>
+
+</div>
 </body>
 </html>
