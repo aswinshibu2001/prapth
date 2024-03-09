@@ -1,14 +1,10 @@
 
 
-h2{
-    /* margin-bottom: 20px; */
+h1{
+    color: #D60073;
     text-align: center;
-    font-size: 60px;
-    font-style: italic;
-    font-family: 'Times New Roman', Times, serif;
-    color: aliceblue;
+   margin-top: 150px;
 }
-
 
 
 body {
