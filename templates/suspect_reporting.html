@@ -5,16 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Face Recognition</title>
 
-    <link rel="stylesheet" href="static/css/suspect_reporting.css">
+    <link rel="stylesheet" href="../static/css/suspect_reporting.css">
+    <script type="module" src="static/js/suspect_reporting.js"></script>
+    
+
 </head>
-<body style="background-image: url('static/images/back1.jpeg'); background-repeat: no-repeat;background-size: cover; background-attachment:fixed;">
+<body >
 
     <a href="/home.html" class="logo">
         <img src="static\images\prapth-logo.jpeg" alt="Prapth Logo" width="80" height="80">
     </a>
     <nav class="navbar">
         <a href="/main-menu.html">  --<i class="arrow right"></i></a>
-        <span id="username-placeholder"></span>
+        <!-- <span id="username-placeholder"></span> -->
     </nav>
 
 
@@ -29,9 +32,13 @@
         <br><br><br>
         <button type="submit">Upload Image</button>
     </form>
-
-    <div id="result"></div>
-
 </div>
+<div id="result">
+<img id="uploadedImage" style="display: none;">
+</div>
+
+
+  
+
 </body>
 </html>
