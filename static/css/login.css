@@ -111,13 +111,13 @@ h1{
   form .form_control .label {
     position: absolute;
     top: 50%;
-    left: 20px;
+    left: 10px;
     transition: transform ease 0.2s;
     transform: translate(0%, -50%);
     font-size: 0.75em;
     user-select: none;
     pointer-events: none;
-    color: #b0b0b0;
+    color: #ffffff;
   }
   
   form .form_control .input {
