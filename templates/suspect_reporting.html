@@ -29,76 +29,16 @@
     <form action="/upload" method="post" enctype="multipart/form-data" id="suspect-form">
         <p style="left: 0px;">Select an image :</p><br><br>
         <input type="file" id="imageInput" name="image" accept="image/*" required>
-        <br>
+        <br><br><br>
         <button type="submit">Upload Image</button>
     </form>
+</div>
+<div id="result">
+<img id="uploadedImage" style="display: none;">
+</div>
 
-    <div id="result"></div>
 
-    <!-- Modify your existing script to include the getLocation function -->
-    <script>
-        const resultDiv = document.getElementById('result');
-
-        function handleFileSelect(event) {
-            const file = event.target.files[0];
-
-            if (!file.type.startsWith('image/')) {
-                resultDiv.textContent = 'Please select an image file.';
-                return;
-            }
-
-            const formData = new FormData();
-            formData.append('image', file);
-
-            fetch('/upload', {
-                method: 'POST',
-                body: formData
-            })
-                .then(response => response.json())
-                .then(data => {
-                    resultDiv.textContent = data.message;
-                })
-                .catch(error => {
-                    resultDiv.textContent = 'An error occurred: ' + error;
-                });
-        }
-
-        document.getElementById('imageInput').addEventListener('change', handleFileSelect);
-
-        // Function to get the user's location
-        function getLocation() {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(showPosition, showError);
-            } else {
-                resultDiv.textContent = 'Geolocation is not supported by this browser.';
-            }
-        }
-
-        // Function to handle successful retrieval of the user's location
-        function showPosition(position) {
-            resultDiv.textContent = 'Latitude: ' + position.coords.latitude + '<br>Longitude: ' + position.coords.longitude;
-        }
-
-        // Function to handle errors during geolocation retrieval
-        function showError(error) {
-            switch (error.code) {
-                case error.PERMISSION_DENIED:
-                    resultDiv.textContent = 'User denied the request for Geolocation.';
-                    break;
-                case error.POSITION_UNAVAILABLE:
-                    resultDiv.textContent = 'Location information is unavailable.';
-                    break;
-                case error.TIMEOUT:
-                    resultDiv.textContent = 'The request to get user location timed out.';
-                    break;
-                case error.UNKNOWN_ERROR:
-                    resultDiv.textContent = 'An unknown error occurred.';
-                    break;
-            }
-        }
-    </script>
-
-    
+  
 
 </body>
 </html>
