@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Face Recognition</title>
 
-    <link rel="stylesheet" href="static/css/suspect_reporting.css">
+    <link rel="stylesheet" href="static/css/missing_reporting.css">
     <script type="module" src="static/js/missing-p-details.js"></script>
 
 </head>
@@ -13,10 +13,20 @@
 
 <body style="background-image: url('static/images/back1.jpeg'); background-repeat: no-repeat;background-size: cover; background-attachment:fixed;">
 
-    <h2>PRAPTH</h2>
 
-    <!-- <div class="form-container" id="reportForm" style="display: none;"> -->
-        <h3>Report Missing Person</h3>
+    <a href="/home.html" class="logo">
+        <img src="static\images\prapth-logo.jpeg" alt="Prapth Logo" width="80" height="80">
+    </a>
+    <nav class="navbar">
+        <a href="/main-menu.html">  --<i class="arrow right"></i></a>
+        <span id="username-placeholder"></span>
+    </nav>
+
+     <h1> <b>W</b>elcome to <b>PRAPTH</b>...!</h1>
+    <p id="p1">Upload a clear image of the person you want to report as Missing. </p>
+
+    <div class="form-container" id="reportForm" >
+        <p>Kindly fill these details about the missing person and provide your phone number and email for further communication.</p><br><br>
         <form id="missingPersonForm">
             <label for="name">Name:</label><br>
             <input type="text" id="name" name="name" ><br>
@@ -39,7 +49,7 @@
             <label for="contact">Contact Details:</label><br>
             <input type="text" id="contact" name="contact"><br>
 
-            <label for="details">Other Details:</label><br>
+            <label for="details">Identification details:</label><br>
             <textarea id="details" name="details"></textarea><br>
 
             <label for="photos">Upload Photos:</label><br>
@@ -47,6 +57,10 @@
 
             <input type="submit" value="Submit">
         </form>
-    <!-- </div>  -->
+    </div> 
+    
+    <p id="p2"> We will update you further details through the email.<br><br> Kindly Please be in touch with us.. <br><br></p>
+    <p style="margin-left: 700px;color: #1884dd ;font-size: larger;">- <b><u>Team Prapth</u></b></p>
+    
 </body>
 </html>

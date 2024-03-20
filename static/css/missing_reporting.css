@@ -1,0 +1,135 @@
+/* ************************************ logo and home button in navigation bar ************************** */
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.navbar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.navbar a {
+    font-size: 18px;
+    color:#fcfeff; 
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 10px;
+    border-radius: 25px;
+    padding: 6px 15px;
+}
+
+.navbar a:hover {
+    background: #1884dd ;
+    color : #fcfeff ;  
+}
+
+.arrow {
+    border: solid rgb(250, 250, 250);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+  }
+  
+  .right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+
+/* ************************************ logo and home button in navigation bar ************************** */
+
+
+
+h1{
+    position: relative;
+    color: #ee38b1;
+    text-align: center;
+   margin-top: 100px;
+   /* left: 200px; */
+   font-family: 'Times New Roman', Times, serif;
+   font-size: 60px;
+}
+
+#p1{
+    position: absolute;
+    color: #fefefe;
+    /* margin-top: 190px; */
+    left: 440px;
+    font-size: larger;
+    padding-bottom: 20px;
+    
+}
+
+#p2{
+    position: relative;
+    left: 340px;
+    font-size: larger;
+    color: #fcf7f7;
+    width: fit-content;
+}
+
+.form-container {
+    border: 3px solid #1884dd; 
+    /* position: absolute; */
+    /* background-color: rgba(239, 198, 198, 0.2); */
+    padding-left: 30px;
+    padding-top: 40px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+   margin-bottom: 10px;
+    margin-top: 100px;
+    width: 50%;
+    margin-left: 350px;
+  color: #fffefe;
+}
+
+.form-container h3 {
+    font-size: 24px;
+}
+
+.form-container form {
+    text-align: left;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-container input[type="file"] {
+    margin-top: 5px;
+}
+
+.form-container input[type="submit"] {
+    background-color: #D60073;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-container input[type="submit"]:hover {
+    background-color: #3253b5;
+}

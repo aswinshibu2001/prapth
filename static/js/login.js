@@ -86,66 +86,30 @@ import {  getFirestore,collection, doc, setDoc as setFirestore, getDoc } from "h
                     });
 
                     alert('User Logged In');
-                    // const usernamePlaceholder = document.getElementById('username-placeholder');
-
-                    // // Set the content of the span to the username
-                    // usernamePlaceholder.textContent = `Welcome, ${user.displayName || user.email}`;
-                    // Redirect to monitoring.html after successful sign-in
-                   // window.location.href = '/main-menu.html';
-                   //const mainMenuPlaceholder = document.getElementById('main-menu-placeholder');
-
-                   // Load main-menu.html content dynamically
-                //    fetch('templates/main-menu.html')
-                //        .then(response => response.text())
-                //        .then(html => {
-                //            mainMenuPlaceholder.innerHTML = html;
-                //         })
-                //         .catch(error => {
-                //             console.error('Error loading main-menu.html:', error);
-                //         });
-                const usernamePlaceholder = document.getElementById('username-placeholder');
-                if (usernamePlaceholder) {
-                    usernamePlaceholder.textContent = user.displayName || user.email;
-                }
-                const mainMenuContent = document.getElementById('main-menu-content');
-                // Show main menu content
-                mainMenuContent.style.display = 'block';
-        
-                // Hide the login form
-                const loginForm = document.getElementById('login-form');
-                loginForm.style.display = 'none';
-         }) })
+                   
+            })
             .catch((error) => {
-                const errorCode = error.code;
                 const errorMessage = error.message;
-        
+    
                 alert(errorMessage);
             });
-                        // Hide the login form or perform other actions as needed
-        //                 const loginForm = document.getElementById('login-form');
-        //                 loginForm.style.display = 'none';
-        // })})
-        //             .catch((error) => {
-        //                 const errorCode = error.code;
-        //                 const errorMessage = error.message;
-                
-        //                 alert(errorMessage);
-        //             });
+    });
+                      
                 
 
-        const signoutButton = document.getElementById('signout');
+// const signoutButton = document.getElementById('signout');
 
-signoutButton.addEventListener('click', (e) => {
-  e.preventDefault();
+// signoutButton.addEventListener('click', (e) => {
+//   e.preventDefault();
 
-  const auth = getAuth();
-  auth.signOut().then(() => {
-    alert('User Signed Out');
+//   const auth = getAuth();
+//   auth.signOut().then(() => {
+//     alert('User Signed Out');
 
-    // Redirect to the home page after successful sign-out
-    window.location.href = "{{ url_for('home') }}";
-  }).catch((error) => {
-    console.error('Error signing out:', error);
-    alert('Error during sign-out. Please try again.');
-  });
-});
+//     // Redirect to the home page after successful sign-out
+//     window.location.href = "{{ url_for('home') }}";
+//   }).catch((error) => {
+//     console.error('Error signing out:', error);
+//     alert('Error during sign-out. Please try again.');
+//   });
+// });

@@ -1,4 +1,4 @@
-
+// contact page
 document.querySelectorAll('.see_content').forEach(button => {
     button.addEventListener('click', () => {
         var container = button.parentElement;

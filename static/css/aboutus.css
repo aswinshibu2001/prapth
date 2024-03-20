@@ -1,79 +1,63 @@
-/* CSS for body */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: black;
-    color: #fff;
-}
-
-/* CSS for navbar */
-nav {
-    background-color: transparent;
-    padding: 15px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    width: 100%;
-}
-
-/* CSS for logo */
-.logo img {
-    max-width: 50px;
-    height: auto;
-}
-
-/* CSS for home link */
-.home {
-    margin-left: auto; /* Moves home link to the right */
-    margin-right: 20px; /* Adjust margin for spacing */
-    padding: 0 10px; /* Add padding for better visibility */
-}
-
-/* CSS for navbar links */
-.nav-links {
-    list-style: none;
+body, html {
     margin: 0;
     padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    color: #fffefe;
 }
 
-.nav-links li {
-    display: inline;
-    margin-left: 20px;
+/* ************************************ logo and home button in navigation bar ************************** */
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
 }
 
-.nav-links a {
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.navbar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.navbar a {
+    font-size: 18px;
     color: #fff;
     text-decoration: none;
+    font-weight: 600;
+    margin: 0 10px;
+    border-radius: 25px;
+    padding: 6px 15px;
 }
 
-/* CSS for content */
-.content {
-    margin-top: 100px;
-    padding: 0 20px;
+.navbar a:hover {
+  background: #1884dd ;
+  color : #fcfeff ;  
 }
 
-/* CSS for about us section */
-.about-us h2 {
-    font-size: 32px;
-    text-align: center;
+.arrow {
+  border: solid rgb(250, 250, 250);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
 }
 
-.about-us h3 {
-    font-size: 24px;
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
 }
 
-.about-us ul {
-    list-style-type: square;
-    margin-left: 20px;
-}
-
-.about-us p {
-    font-size: 18px;
-    line-height: 1.6;
-    text-align: justify;
+/* ************************************ logo and home button in navigation bar ************************** */
+h1{
+  position: relative;
+  color: #ee38b1;
+  text-align: center;
+ margin-top: 100px;
+ /* left: 200px; */
+ font-family: 'Times New Roman', Times, serif;
+ font-size: 60px;
 }

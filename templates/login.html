@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>Sign In & Sign Up Form</title>
     <link rel="stylesheet" href="static\css\login.css"> 
 </head>
@@ -62,6 +63,76 @@
             document.querySelector('.cont').classList.toggle('s--signup');
         });
     </script>
+=======
+    <title>Missing Persons Portal - Login</title>
+    <link rel="stylesheet" href="static\css\login.css">
+    <script type="module" src="static/js/login.js"></script>
+</head>
+
+
+<body style="background-image: url('static/images/back1.jpeg'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed;">
+
+    <a href="/home.html" class="logo">
+        <img src="static\images\prapth-logo.jpeg" alt="Prapth Logo" width="80" height="80">
+    </a>
+    <nav class="navbar">
+        <a href="/home.html"> --<i class="arrow right"></i></a>
+        <span id="username-placeholder"></span>
+    </nav>
+
+
+    <h1> <b>W</b>elcome to <b>PRAPTH</b>...!</h1>
+
+    <div class="container">
+        <input type="checkbox" id="register_toggle">
+
+
+        <div class="slider">
+            <div id="signin-form">
+                <form class="form">
+                    <span class="title">Login</span>
+                    <div class="form_control">
+                    <input type="text" class="input" id="signin-email" required="">
+                    <label class="label">Username</label>
+                    </div>
+                    <div class="form_control">
+                    <input type="password" class="input" id="signin-password"required="">
+                    <label class="label">Password</label>
+                    </div>
+                    <button>Login</button>
+            
+                    <span class="bottom_text">Don't have an account? <label for="register_toggle" class="swtich">Sign Up</label> </span>
+                </form>
+
+            </div>
+
+
+            <div id="signup-form" style="padding-left: 40px;">
+                <form class="form">
+                    <span class="title">Sign Up</span>
+                    <div class="form_control">
+                    <input type="text" class="input" id="name" required="">
+                    <label class="label">Username</label>
+                    </div>
+                    <div class="form_control">
+                    <input type="email" class="input" id="email" required="">
+                    <label class="label" >Email</label>
+                    </div>
+                    <div class="form_control">
+                    <input type="password" class="input"  id="password" required="">
+                    <label class="label">Password</label>
+                    </div>
+                    <button>Sign Up</button>
+            
+                    <span class="bottom_text">Already have an account? <label for="register_toggle" class="swtich">Sign In</label> </span>
+                </form>
+            </div>  
+            
+        </div>
+    </div>
+
+
+>>>>>>> dcb24ff3450121626e5be4939091e5e14c07abc5
 </body>
 
 </html>
