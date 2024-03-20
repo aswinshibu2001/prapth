@@ -81,6 +81,10 @@ def home():
 def form():
     return render_template('main-menu.html')
 
+@app.route('/contact.html')
+def contact():
+    return render_template('contact.html')
+
 @app.route('/home.html')
 def home_page():
     return render_template('home.html')
