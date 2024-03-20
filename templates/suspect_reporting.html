@@ -10,7 +10,7 @@
     
 
 </head>
-<body >
+<body onload="getLocation()">
 
     <a href="/home.html" class="logo">
         <img src="static\images\prapth-logo.jpeg" alt="Prapth Logo" width="80" height="80">
@@ -29,6 +29,8 @@
     <form action="/upload" method="post" enctype="multipart/form-data" id="suspect-form">
         <p style="left: 0px;">Select an image :</p><br><br>
         <input type="file" id="imageInput" name="image" accept="image/*" required>
+        <input type="hidden" id="latitude" name="latitude">
+        <input type="hidden" id="longitude" name="longitude">
         <br><br><br>
         <button type="submit">Upload Image</button>
     </form>
@@ -37,6 +39,22 @@
 <img id="uploadedImage" style="display: none;">
 </div>
 
+<script>
+    // Function to get user's location
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+            console.log("Geolocation is not supported by this browser.");
+        }
+    }
+
+    // Function to update hidden input fields with latitude and longitude
+    function showPosition(position) {
+        document.getElementById("latitude").value = position.coords.latitude;
+        document.getElementById("longitude").value = position.coords.longitude;
+    }
+</script>
 
   
 
