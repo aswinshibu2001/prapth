@@ -1,29 +1,189 @@
 
+/* ************************************ logo and home button in navigation bar ************************** */
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
 
-h2{
-    /* margin-bottom: 20px; */
-    text-align: center;
-    font-size: 60px;
-    font-style: italic;
-    font-family: 'Times New Roman', Times, serif;
-    color: aliceblue;
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.navbar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 10px;
+    border-radius: 25px;
+    padding: 6px 15px;
+}
+
+.navbar a:hover {
+    background: #1884dd ;
+    color : #fcfeff ;  
 }
 
 
+.arrow {
+    border: solid rgb(250, 250, 250);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+  }
+  
+  .right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+
+/* ************************************ logo and home button in navigation bar ************************** */
+
+h1{
+    position: relative;
+    color: #D60073;
+    text-align: center;
+   margin-top: 100px;
+   font-family: 'Times New Roman', Times, serif;
+   font-size: 60px;
+}
+
+#p1{
+    position: relative;
+    color: #fefefe;
+    text-align: center;
+    font-size: larger;
+    margin-bottom: 20px;
+}
 
 body {
     height: 100vh;
-    /* background-color: rgb(193, 18, 76); */
-    margin: 0;
-    display: flex;
-    /* align-items: center; */
-    /* justify-content: center; */
+    background-image: url('../images/back1.jpeg');
+     background-repeat: no-repeat;
+     background-size: cover; 
+     background-attachment:fixed;
+    overflow-x: hidden;
 }
 
-.suspect-form {
-    /* padding-top: 100px; */
-    margin-top: 20px;
-    color: aliceblue;
+
+#form{
+    position: relative;
     text-align: center;
-    /* Add any other styling you need for your form */
+    margin-top: 40px;
+    left: 600px;
+    height: 340px;
+    width: 300px;
+}
+
+#suspect-form {
+   
+    border: 5px solid #ccc; 
+    margin-top: 50px;
+    padding: 20px;
+    width: 100%; 
+    max-width: 500px;
+    height: 300px;
+    margin: 0 auto; 
+    text-align: center;
+    color: #f8f8f8;
+    
+}
+
+#suspect-form input {
+    margin-bottom: 10px; 
+}
+
+#suspect-form button {
+    background-color: #16f91e; 
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* ********************************************************************************************************************* */
+#result {
+    position: relative; 
+    margin-top: 40px;
+    text-align: center; 
+    left: 20px;
+    padding-top: 30px;
+}
+
+
+#uploadedImage {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;  
+    margin-top: 10px;  
+}
+
+/* ********************************************************************************************************************
+/* Media Query for Mobile Screens */
+@media screen and (max-width: 500px) {
+
+     .navbar{
+        position: absolute;
+        left: 300px;
+        /* width: auto; */
+
+     }
+    h1 {
+        font-size: 30px;
+        margin-top: 150px;
+        /* width: 70%; */
+    }
+
+    body{
+        
+        overflow-x: hidden;
+        background-image: 70%;
+    }
+
+    #p1 {
+        font-size: 18px;
+        margin-top: 50px;
+        /* width: 70%; */
+    }
+
+    #form {
+        margin-top: 70px;
+        left: 10px;
+        /* width: 50%; */
+    }
+
+    #suspect-form {
+        margin-top: 20px;
+        padding: 10px;
+        height: 250px;
+    }
+
+    #suspect-form input {
+        margin-bottom: 5px;
+    }
+
+    #suspect-form button {
+        padding: 6px 12px;
+    }
+
+    #result {
+        margin-top: 20px;
+        padding-top: 20px;
+        /* width: 70%; */
+    }
+
+    #uploadedImage {
+        width: 80%;
+        height: auto;
+        margin-top: 10px;
+    }
 }

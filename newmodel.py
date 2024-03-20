@@ -1,5 +1,5 @@
 #take images for comparison from a firebase storage
-#comment by Jeevan
+
 import os
 import torch
 from PIL import Image
@@ -149,8 +149,13 @@ def upload():
         min_index = distances.index(min_distance)
         file_name = os.path.split(known_face_filenames[min_index])[-1]
         message = f"Found in Database: {file_name} with distance: {min_distance.item()}"
+        # save_path = os.path.join("known-images", "uploaded_face.jpg")
+        # image.save(save_path)
+        # return render_template("result.html", uploaded_image_url= face, result_message=message)
+        message = f"Found in Database: {file_name} with distance: {min_distance.item()}"
     else:
         message = "Not Found in Database"
+        # return render_template("result.html", uploaded_image_url= face, result_message=message)
 
     return jsonify({"message": message})
 
